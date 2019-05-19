@@ -3,7 +3,6 @@
 #include <iomanip>
 #include "../headers/vector.h"
 #include "../headers/timer.h"
-#include <fstream>
 
 using std::cout;
 using std::cin;
@@ -39,9 +38,6 @@ int main (int argc, const char * argv[])
     auto h2 = clock2.elapsed();
     cout << "Uztruko " << std::fixed << std::setprecision(8) << h2 << " s " << endl;
         
-    std::ofstream out("teds.txt");
-    out << std::fixed << std::setprecision(8) << h1 << " s " << endl;
-    out << std::fixed << std::setprecision(8) << h2 << " s " << endl;
     return 0;
     
 }
