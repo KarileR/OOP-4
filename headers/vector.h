@@ -19,11 +19,14 @@ class Vector
         typedef T* iterator;
         typedef const T* const_iterator;
 
-        //KONSTRUKTORIAI
+        //KONSTRUKTORIAI, DESTRUKTORIAI
 
-        Vector();
-        Vector(size_t size);
-        Vector(size_t size, T value);
+        Vector() : _size(0), _capacity(0), _elem(new T[_capacity]) {}
+        Vector(size_t size):  _size(size), _capacity(size), _elem(new T[size]) {};
+
+        Vector(size_t size, T value): _size{size}, _capacity{size} , _elem{ new T[size] } {
+	    std::fill_n(_elem, size, value);}
+
         ~Vector() { delete[] _elem; };
 
         Vector(Vector&& other) : _size(other.size()), _capacity(other.capacity()), _elem(other._elem){
@@ -32,7 +35,6 @@ class Vector
             other._capacity = 0;
 	    }
 
-    
         //OPERATORIAI
 
 
@@ -46,19 +48,19 @@ class Vector
 			return _elem[i];
         }
 
-        Vector& operator=(const Vector& v) {
-            if (&v == this) return *this; // Savęs priskyrimo aptikimas
+        Vector& operator = (const Vector& v) {
+            if (&v == this) return *this; 
 
             T* temp = new T[v.size()];
 
-            for (int i=0; i != v.size(); ++i) // nukopijuojame v elementus
+            for (int i=0; i != v.size(); ++i) 
                 temp[i] = v._elem[i];
 
-            delete[] _elem; // atlaisviname seną atmintį!
-            _elem = temp;      // elem point'ina į naują atmintį
-            _size = v.size();     // atnaujiname size
+            delete[] _elem; 
+            _elem = temp;      
+            _size = v.size();     
             _capacity = v.capacity();
-            return *this;  // grąžiname objektą
+            return *this;  
         }
 
 
@@ -193,19 +195,6 @@ class Vector
                 temp = nullptr;
 		    }
 	    }
-    
-        iterator erase (iterator first, iterator last)
-        {
-            
-            std::move(last ++ , last + _size , first);
-            while (first != last)
-            {
-                _size--;
-                first++;
-            }
-        }
-        
-        
         
 };
 
