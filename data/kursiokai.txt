@@ -1,1 +1,11 @@
-
+Simona      Pavarde1    8    9    10    6   10    9
+Vardas      Pavarde2	10   8     3    4    6    2
+Martynas    Pavarde4 	7   10     8    5    4    6
+Vardas      Pavarde5	7   10     8    5    4    4
+Karolina    Pavarde6    8    9     10   6   10    9
+Vardas      Pavarde7	6   10     4    7    5    5
+Akvile      Pavarde8    8    6     2    2    4    3
+Vardas      Pavarde9	7   10     6    5    4    6
+Vardas      Pavarde10   8    9    10    6   10   10
+Agne        Pavarde11	4   10     9    5    4    6
+Aidas       Pavarde3    8    6     1    2    4    5
