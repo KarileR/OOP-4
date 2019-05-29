@@ -21,9 +21,9 @@ Patikrinta, kiek laiko užtrunka įrašyti, rūšiuoti, išvesti duomenis su ati
 
 | Veiksmas | Vector <> | std::vector <> |
 | --- | --- | --- |
-| Irasymas |  0.00097800 s   |  0.00100200 s      | 
-| Rusiavimas |  0.00100300 s   |  0.00200600 s      |
-| Isvedimas |  0.01103000 s    |  0.01802100 s      |  
+| Irasymas |  0.928687 s   |  0.934754 s      | 
+| Rusiavimas |  0.913252 s   |  0.885292 s     |
+| Isvedimas |  2.676962 s    |  1.874561 s      |  
 
 __Išvados__
 
