@@ -3,6 +3,10 @@
 
 __Spartos analizė:__
 
+__1__
+
+Patikrinta, kiek laiko užtrunka visa programa, priklausomai nuo naudojamo vektoriaus 
+
 | Elementu sk. | Vector <> | std::vector <> |
 | --- | --- | --- |
 | 10000 |  0.00097800 s   |  0.00100200 s      | 
@@ -10,6 +14,16 @@ __Spartos analizė:__
 | 1000000 |  0.01103000 s    |  0.01802100 s      |  
 | 10000000 |  0.12032000 s    |  0.18451700 s     |  
 | 100000000 |  1.13100500 s   |  1.77872700 s      |  
+
+__2__
+
+Patikrinta, kiek laiko užtrunka įrašyti, rūšiuoti, išvesti duomenis su atitinkamu vektoriumi
+
+| Veiksmas | Vector <> | std::vector <> |
+| --- | --- | --- |
+| Irasymas |  0.00097800 s   |  0.00100200 s      | 
+| Rusiavimas |  0.00100300 s   |  0.00200600 s      |
+| Isvedimas |  0.01103000 s    |  0.01802100 s      |  
 
 __Išvados__
 
@@ -85,4 +99,5 @@ void resize(size_t n)
         }
 
 ```
+
 
